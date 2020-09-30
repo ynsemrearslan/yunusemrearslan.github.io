@@ -1,0 +1,87 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent), radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+}
+
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  position: absolute;
+  bottom: 2vmin;
+  right: 2vmin;
+  color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+body {
+  align-items: center;
+  background-color: #ccc;
+  background-image: radial-gradient(#fff, #ccc);
+  display: flex;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 64vmin;
+}
+.container .box {
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 3vmin;
+  height: 30vmin;
+  justify-content: center;
+  margin: 1vmin;
+  padding: 3vmin;
+  width: 30vmin;
+}
+.container .box:nth-child(1) {
+  background-color: #f35b3b;
+}
+.container .box:nth-child(2) {
+  background-color: #abccf2;
+}
+.container .box:nth-child(3) {
+  background-color: #d2abf2;
+}
+.container .box:nth-child(4) {
+  background-color: #DAF7A6;
+}
+
+/* fill styles */
+.fill-layer {
+  animation: fill 1s ease-in-out;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes fill {
+  0% {
+    border-radius: 50%;
+    transform: translateY(150%) translateX(150%) scale(2);
+  }
+  100% {
+    border-radius: 50%;
+    transform: scale(2);
+  }
+}
